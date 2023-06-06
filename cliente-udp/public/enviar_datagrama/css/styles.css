@@ -1,0 +1,22 @@
+.container-externo {
+    
+    padding: 45px;
+    margin: 65px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background-color: rgba(255, 255, 255, 0.363); 
+  }
+
+body {
+    background: rgb(135,70,255);
+    background: linear-gradient(90deg, rgba(135,70,255,0.9836309523809523) 1%, rgba(46,10,107,0.6811099439775911) 68%, rgba(154,0,255,0.9668242296918768) 99%);
+}
+.texto {
+    color: white;
+    font-style: oblique;
+    font-size: xxx-large;
+    text-align: center;
+
+}

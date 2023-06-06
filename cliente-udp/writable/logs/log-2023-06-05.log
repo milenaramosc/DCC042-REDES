@@ -1,0 +1,456 @@
+CRITICAL - 2023-06-05 15:29:30 --> socket_bind(): Host lookup failed [-10003]: Unknown server error
+in APPPATH/Controllers/DataGrama.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(37): socket_bind()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:32:08 --> socket_bind(): Host lookup failed [-10003]: Unknown server error
+in APPPATH/Controllers/DataGrama.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(37): socket_bind()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:32:59 --> socket_bind(): Host lookup failed [-10003]: Unknown server error
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): socket_bind()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:33:07 --> socket_bind(): Host lookup failed [-10003]: Unknown server error
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): socket_bind()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:33:26 --> socket_bind(): Host lookup failed [-10003]: Unknown server error
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): socket_bind()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:33:49 --> strlen(): Argument #1 ($string) must be of type string, array given
+in APPPATH/Controllers/DataGrama.php on line 36.
+ 1 APPPATH/Controllers/DataGrama.php(36): strlen()
+ 2 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:35:29 --> strlen(): Argument #1 ($string) must be of type string, array given
+in APPPATH/Controllers/DataGrama.php on line 35.
+ 1 APPPATH/Controllers/DataGrama.php(35): strlen()
+ 2 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:58:26 --> strlen(): Argument #1 ($string) must be of type string, array given
+in APPPATH/Controllers/DataGrama.php on line 35.
+ 1 APPPATH/Controllers/DataGrama.php(35): strlen()
+ 2 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:58:48 --> strlen(): Argument #1 ($string) must be of type string, array given
+in APPPATH/Controllers/DataGrama.php on line 35.
+ 1 APPPATH/Controllers/DataGrama.php(35): strlen()
+ 2 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 15:59:08 --> strlen(): Argument #1 ($string) must be of type string, array given
+in APPPATH/Controllers/DataGrama.php on line 35.
+ 1 APPPATH/Controllers/DataGrama.php(35): strlen()
+ 2 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:00:21 --> strlen(): Argument #1 ($string) must be of type string, array given
+in APPPATH/Controllers/DataGrama.php on line 36.
+ 1 APPPATH/Controllers/DataGrama.php(36): strlen()
+ 2 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:00:53 --> strlen(): Argument #1 ($string) must be of type string, array given
+in APPPATH/Controllers/DataGrama.php on line 36.
+ 1 APPPATH/Controllers/DataGrama.php(36): strlen()
+ 2 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:01:28 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:02:33 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:03:25 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:04:03 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:04:35 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:04:53 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:05:47 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:06:16 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:07:00 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:07:25 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 34.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(34): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:08:23 --> socket_bind(): Host lookup failed [-10001]: Unknown host
+in APPPATH/Controllers/DataGrama.php on line 33.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(33): socket_bind()
+ 3 APPPATH/Controllers/DataGrama.php(13): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:09:21 --> Undefined variable $dataGrama
+in APPPATH/Controllers/DataGrama.php on line 15.
+ 1 APPPATH/Controllers/DataGrama.php(15): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:16:22 --> Call to undefined method CodeIgniter\HTTP\IncomingRequest::hasFile()
+in APPPATH/Controllers/DataGrama.php on line 13.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:22:25 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(42): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(15): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:24:03 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(42): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(15): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:26:09 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 42.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(42): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(15): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:33:07 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(41): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(14): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:34:07 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(45): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(18): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 16:38:43 --> Undefined array key "arquivo"
+in APPPATH/Controllers/DataGrama.php on line 14.
+ 1 APPPATH/Controllers/DataGrama.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 19:46:39 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 52.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(52): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 19:47:38 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 52.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(52): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 19:48:42 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 52.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(52): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 19:49:45 --> fopen(/public/saida.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 52.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(52): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 20:56:14 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(76): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:01:45 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(76): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:12:33 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(76): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:14:35 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(76): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:17:52 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(76): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:18:07 --> fopen(/public/arquivo_recebido.txt): Failed to open stream: No such file or directory
+in APPPATH/Controllers/DataGrama.php on line 33.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(33): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:18:42 --> fopen(/arquivo_recebido.txt): Failed to open stream: Permission denied
+in APPPATH/Controllers/DataGrama.php on line 33.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(33): fopen()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:19:25 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 78.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(78): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:21:13 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 78.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(78): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:36:44 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 78.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(78): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:37:04 --> socket_bind(): Unable to bind address [98]: Address already in use
+in APPPATH/Controllers/DataGrama.php on line 51.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(51): socket_bind()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
+CRITICAL - 2023-06-05 21:40:42 --> socket_recvfrom(): Unable to recvfrom [4]: Interrupted system call
+in APPPATH/Controllers/DataGrama.php on line 75.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/DataGrama.php(75): socket_recvfrom()
+ 3 APPPATH/Controllers/DataGrama.php(20): App\Controllers\DataGrama->clienteUDP()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DataGrama->index()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/home/milena/ufjf/DCC042-REDES/tf-protocolo-udp/cliente-udp/public/index.php')
