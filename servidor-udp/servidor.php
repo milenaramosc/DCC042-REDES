@@ -4,8 +4,11 @@
         //$arq = fopen(__DIR__.'/arquivo_recebido.txt', 'w+');
         echo "Servidor UDP\n";
        
-        $serverIP = "192.168.2.115"; // IP do servidor   
-        $serverPort = 12384; // Porta do servidor
+        $clientIP = $serverIP = "10.0.0.106";//"192.168.2.115"; //"10.5.191.126"; // IP do servidor   
+        $clientPort = $serverPort = 12384; // Porta do servidor
+
+        // $clientIP = "192.168.2.115"; //"10.5.191.126"; // IP do servidor   
+        // $clientPort = 12384; // Porta do servidor
         
         $socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
         socket_bind($socket, $serverIP, $serverPort);
@@ -22,6 +25,8 @@
             
             $sequenceNumber = unpack('N', substr($packet, 0, 4))[1];
             $packetData = substr($packet, 4);
+
+            printf("DataGrama recebido %s\n", $packetData);
             //print_r($packetData);
             // Simular perda de pacotes aleatoriamente
             // if (rand(0, 10) < 3) {
@@ -40,9 +45,10 @@
             socket_sendto($socket, $ack, 4, 0, $clientIP, $clientPort);
 
             // Verificar se todos os pacotes foram recebidos
-            if (count($receivedPackets) === $windowSize) {
-                break;
-            }
+            // if (count($receivedPackets) === $windowSize) {
+            //     echo "Todos os pacotes foram recebidos\n";
+            //     break;
+            // }
         }
         print_r($receivedPackets);
         // Recriar o arquivo a partir dos pacotes recebidos
