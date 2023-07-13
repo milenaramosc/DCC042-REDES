@@ -16,22 +16,19 @@ event.preventDefault(); // Prevenir o comportamento padrão de envio do formulá
 const file = fileInput.files[0];
 
 try {
-    console.log(file);
+    //console.log(file);
     //return await sendDatagram(file); 
     const formData = new FormData(); // Cria uma instância de FormData
-    formData.append('arquivo', file); // Adiciona o arquivo ao formulário com um nome de campo
-  console.log(formData);
+    formData.append('file', file); // Adiciona o arquivo ao formulário com um nome de campo
+    console.log(formData);
     fetch('/send-data-grama',  {
       method: 'POST',
-      // headers: {
-      //   'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-      // },
       body: formData
-    }).then((response) => {
-      //response = response.json();
-      console.log("teste: ", response);
-      return response;
-    })
+    }).then(response => response.json())
+      .then(data => {
+        console.log(data.teste);
+        return data;
+      })
       .catch(error => {
         return error
       }); 

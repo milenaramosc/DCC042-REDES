@@ -21,7 +21,7 @@ class ControlVariable
 
     public function __construct()
     {
-        $this->serverIP = "10.5.191.126";
+        $this->serverIP = "127.0.0.1";//"192.168.2.115";//"10.5.191.126";
         $this->serverPort = 12384;
        
         $this->maxBytes = 1024;

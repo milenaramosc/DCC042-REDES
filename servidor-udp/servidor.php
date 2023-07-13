@@ -1,62 +1,76 @@
 <?php
+    echo "Servidor UDP escontando\n";
+    $serverIP = '127.0.0.1'; // IP do servidor
+    $serverPort = 12384; // Porta do servidor
+   
+    $socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+    socket_bind($socket, $serverIP, $serverPort);
 
+    $bufferSize = 1024; // Tamanho do buffer
+    $windowSize = 10; // Tamanho da janela deslizante
+    $windowBase = 0; // Base da janela deslizante do servidor
+    $windowEnd = $windowBase + $windowSize - 1; // Fim da janela deslizante do servidor
 
-        //$arq = fopen(__DIR__.'/arquivo_recebido.txt', 'w+');
-        echo "Servidor UDP\n";
-       
-        $clientIP = $serverIP = "10.0.0.106";//"192.168.2.115"; //"10.5.191.126"; // IP do servidor   
-        $clientPort = $serverPort = 12384; // Porta do servidor
+    // Receber tamanho da janela do cliente
+    $windowMsg = '';
+    socket_recvfrom($socket, $windowMsg, $bufferSize, 0, $clientIP, $clientPort);
+    echo "Cliente IP: ".$clientIP . "\n";
+    echo "Cliente Port: ".$clientPort . "\n";
+    //echo "Teste: ".$teste . "\n";return 0;
+    echo "Janela de Msg";
+    print_r($windowMsg);
+    echo "\n";
+    $windowSize = (int)explode('|', $windowMsg)[1];
+    echo "Tamnho da janela: ".$windowSize . "\n";
+    $fileHandle = fopen(__DIR__.'/arquivo_recebido.txt', 'w+'); // Caminho para salvar o arquivo recebido
+    $window = []; // Janela deslizante do servidor
 
-        // $clientIP = "192.168.2.115"; //"10.5.191.126"; // IP do servidor   
-        // $clientPort = 12384; // Porta do servidor
-        
-        $socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
-        socket_bind($socket, $serverIP, $serverPort);
-
-        $bufferSize = 1024; // Tamanho do buffer para cada pacote
-        $windowSize = 10; // Tamanho da janela deslizante
-        $expectedSequenceNumber = 0; // Número de sequência esperado
-        $receivedPackets = []; // Armazenar pacotes recebidos
-
-
-        while (true) {
-            // Receber pacotes
-            socket_recvfrom($socket, $packet, $bufferSize + 4, 0, $clientIP, $clientPort);
-            
-            $sequenceNumber = unpack('N', substr($packet, 0, 4))[1];
-            $packetData = substr($packet, 4);
-
-            printf("DataGrama recebido %s\n", $packetData);
-            //print_r($packetData);
-            // Simular perda de pacotes aleatoriamente
-            // if (rand(0, 10) < 3) {
-            //     continue; // Descartar pacote
-            // }
-            printf("Pacote %d recebido\n", $sequenceNumber);
-            printf("Pacote %d esperado\n", $expectedSequenceNumber);
-            // Verificar número de sequência e adicionar ao buffer
-            if ($sequenceNumber === $expectedSequenceNumber) {
-                $receivedPackets[] = $packetData;
-                $expectedSequenceNumber++;
-            }
-
-            // Enviar ACK cumulativo
-            $ack = pack('N', $expectedSequenceNumber - 1);
-            socket_sendto($socket, $ack, 4, 0, $clientIP, $clientPort);
-
-            // Verificar se todos os pacotes foram recebidos
-            // if (count($receivedPackets) === $windowSize) {
-            //     echo "Todos os pacotes foram recebidos\n";
-            //     break;
-            // }
+    while (true) {
+        $packet = '';
+        socket_recvfrom($socket, $packet, $bufferSize, 0, $clientIP, $clientPort);
+        echo "Pacote recebido: ".$packet . "\n";
+        if (strpos($packet, 'CLOSE_CONNECTION') !== false) {
+            echo 'FIM';
+            // Recebido pedido de encerramento da conexão
+            break;
         }
-        print_r($receivedPackets);
-        // Recriar o arquivo a partir dos pacotes recebidos
-        $fileData = implode('', $receivedPackets);
-        $fileData = mb_convert_encoding($fileData, 'UTF-8', 'auto');
-        fopen(__DIR__.'/arquivo_recebido.txt', 'w+');
-        file_put_contents(__DIR__.'/arquivo_recebido.txt', $fileData);
+        echo "Pacote recebido: ".$packet . "\n";
+        $seqNumber = (int)explode('|', $packet)[1];
+        $data = base64_decode(explode('|', $packet)[2]);
+        echo "SeqNumber: ".$seqNumber . "\n";
+        if ($seqNumber >= $windowBase && $seqNumber < $windowBase + $windowSize) {
+            // Pacote dentro da janela deslizante do servidor
+            print_r($data);
+            echo "\n";
+            fwrite($fileHandle, $data);
 
-        socket_close($socket);
+            // Adicionar pacote à janela deslizante
+            $window[$seqNumber % ($windowSize * 2)] = $packet;
 
+            // Enviar ACK acumulativo para o cliente
+            $ack = "ACK|" . ($seqNumber % ($windowSize * 2));
+            echo "ACK: ".$ack . "\n";
+            socket_sendto($socket, $ack, strlen($ack), 0, $clientIP, $clientPort);
 
+            if ($seqNumber == $windowBase) {
+                // Deslizar janela deslizante
+                $windowBase++;
+                $windowEnd = $windowBase + $windowSize - 1;
+
+                // Confirmar pacotes seguintes na janela deslizante
+                for ($i = $windowBase; $i <= $windowEnd; $i++) {
+                    if (isset($window[$i])) {
+                        fwrite($fileHandle, base64_decode(explode('|', $window[$i])[2]));
+                        unset($window[$i]);
+                    } else {
+                        break;
+                    }
+                }
+            }
+        } else {
+            // Pacote fora da janela deslizante, descartar
+        }
+    }
+
+    fclose($fileHandle);
+    socket_close($socket);
