@@ -1,63 +1,105 @@
 <?php
-    echo "Servidor UDP escontando\n";
-    $serverIP = '127.0.0.1'; // IP do servidor
-    $serverPort = 12384; // Porta do servidor
-   
-    $socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
-    socket_bind($socket, $serverIP, $serverPort);
+function simulatePacketLoss($lossProbability)
+{
+    $randomNumber = mt_rand() / mt_getrandmax();
 
-    $bufferSize = 1024; // Tamanho do buffer
-    $windowSize = 10; // Tamanho da janela deslizante
-    $windowBase = 0; // Base da janela deslizante do servidor
-    $windowEnd = $windowBase + $windowSize - 1; // Fim da janela deslizante do servidor
+    if ($randomNumber < $lossProbability) {
+        // Pacote perdido, retorna verdadeiro
+        return true;
+    } else {
+        // Pacote não perdido, retorna falso
+        return false;
+    }
+}
 
-    // Receber tamanho da janela do cliente
-    $windowMsg = '';
-    socket_recvfrom($socket, $windowMsg, $bufferSize, 0, $clientIP, $clientPort);
-    echo "Cliente IP: ".$clientIP . "\n";
-    echo "Cliente Port: ".$clientPort . "\n";
-    //echo "Teste: ".$teste . "\n";return 0;
-    echo "Janela de Msg";
-    print_r($windowMsg);
-    echo "\n";
-    $windowSize = (int)explode('|', $windowMsg)[1];
-    echo "Tamnho da janela: ".$windowSize . "\n";
-    $fileHandle = fopen(__DIR__.'/arquivo_recebido.txt', 'w+'); // Caminho para salvar o arquivo recebido
-    $window = []; // Janela deslizante do servidor
+function congestionControl($currentWindowSize, $packetLoss)
+{
+    $maxWindowSize = 100; // Tamanho máximo da janela
+    $ssthresh = 16; // Threshold inicial
 
-    while (true) {
-        $packet = '';
-        socket_recvfrom($socket, $packet, $bufferSize, 0, $clientIP, $clientPort);
-        echo "Pacote recebido: ".$packet . "\n";
+    if ($packetLoss) {
+        // Fast Recovery
+        $currentWindowSize = $ssthresh / 2; // Reduz a janela pela metade
+    } elseif ($currentWindowSize < $ssthresh) {
+        // Slow Start
+        $currentWindowSize += 1; // Incrementa a janela em 1 a cada pacote ACK recebido
+    } else {
+        // Congestion Avoidance
+        $congestionWindowSizeIncrement = 1 / $currentWindowSize;
+        $currentWindowSize += $congestionWindowSizeIncrement; // Incrementa a janela por 1/CWND a cada pacote ACK recebido
+    }
+
+    // Limita a janela ao tamanho máximo
+    if ($currentWindowSize > $maxWindowSize) {
+        $currentWindowSize = $maxWindowSize;
+    }
+
+    // Limita a janela a um tamanho mínimo
+    if ($currentWindowSize < 1) {
+        $currentWindowSize = 1;
+    }
+
+    return $currentWindowSize;
+}
+
+echo "Servidor UDP escontando\n";
+$serverIP = '127.0.0.1'; // IP do servidor
+$serverPort = 12384; // Porta do servidor
+
+$socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+socket_bind($socket, $serverIP, $serverPort);
+
+$bufferSize = 1024; // Tamanho do buffer
+$windowSize = 10; // Tamanho da janela deslizante
+$windowBase = 0; // Base da janela deslizante do servidor
+$windowEnd = $windowBase + $windowSize - 1; // Fim da janela deslizante do servidor
+
+$fileHandle = fopen(__DIR__ . '/arquivo_recebido.txt', 'w+'); // Caminho para salvar o arquivo recebido
+$window = []; // Janela deslizante do servidor
+
+while (true) {
+    $packet = '';
+    socket_recvfrom($socket, $requestMsg, $bufferSize, 0, $clientIP, $clientPort);
+
+    if ($requestMsg === 'REQUEST_WINDOW_SIZE') {
+        $responseWindowSize = "WINDOW_SIZE|{$windowSize}";
+        socket_sendto($socket, $responseWindowSize, strlen($responseWindowSize), 0, $clientIP, $clientPort);
+    } else {
+        $packet = $requestMsg;
+
         if (strpos($packet, 'CLOSE_CONNECTION') !== false) {
             echo 'FIM';
-            // Recebido pedido de encerramento da conexão
             break;
         }
-        echo "Pacote recebido: ".$packet . "\n";
+
         $seqNumber = (int)explode('|', $packet)[1];
+        // Simulação de perda de pacotes
+        $packetLoss = simulatePacketLoss(0.2); // Aqui estou adotando uma probabilidade de 20% de perda de pacotes
+
+        if ($packetLoss) {
+            $ack = "ACK_PERDIDO|" . ($seqNumber % ($windowSize * 2));
+            echo "Pacote perdido: " . $ack . "\n";
+            //print_r($window);
+            socket_sendto($socket, $ack, strlen($ack), 0, $clientIP, $clientPort);
+            continue;
+        }
+
         $data = base64_decode(explode('|', $packet)[2]);
-        echo "SeqNumber: ".$seqNumber . "\n";
+
         if ($seqNumber >= $windowBase && $seqNumber < $windowBase + $windowSize) {
             // Pacote dentro da janela deslizante do servidor
-            print_r($data);
-            echo "\n";
             fwrite($fileHandle, $data);
 
-            // Adicionar pacote à janela deslizante
             $window[$seqNumber % ($windowSize * 2)] = $packet;
 
-            // Enviar ACK acumulativo para o cliente
             $ack = "ACK|" . ($seqNumber % ($windowSize * 2));
-            echo "ACK: ".$ack . "\n";
+            echo "ACK: " . $ack . "\n";
             socket_sendto($socket, $ack, strlen($ack), 0, $clientIP, $clientPort);
-
+            unset($window[$seqNumber % ($windowSize * 2)]);
             if ($seqNumber == $windowBase) {
-                // Deslizar janela deslizante
                 $windowBase++;
                 $windowEnd = $windowBase + $windowSize - 1;
 
-                // Confirmar pacotes seguintes na janela deslizante
                 for ($i = $windowBase; $i <= $windowEnd; $i++) {
                     if (isset($window[$i])) {
                         fwrite($fileHandle, base64_decode(explode('|', $window[$i])[2]));
@@ -67,10 +109,12 @@
                     }
                 }
             }
-        } else {
-            // Pacote fora da janela deslizante, descartar
         }
-    }
 
-    fclose($fileHandle);
-    socket_close($socket);
+        // Controle de congestionamento
+        $windowSize = congestionControl($windowSize, $packetLoss);
+    }
+}
+
+fclose($fileHandle);
+socket_close($socket);
